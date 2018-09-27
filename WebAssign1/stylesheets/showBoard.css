@@ -1,0 +1,169 @@
+
+body{
+    background-image: url("../assets/16.jpg");
+}
+
+#nextBackground{
+    background-color:rgba(0,0,0,0.5);
+    margin:-30px -10px -100px -10px;
+    padding-bottom: 50px;
+    background-size: cover;
+
+}
+
+#router{
+    background-color: rgba(255, 255, 255, 0.72);
+    width:100%;
+    height:70px;
+    /*padding:20px;*/
+    margin-right:-100px;
+}
+
+#title{
+    color: black;
+    padding-left:30px;
+    margin-top:20px;
+    font-size:30px;
+    position:absolute;
+    font-family: "Segoe Script";
+}
+
+ul{
+    float:right;
+    display: inline-block;
+    list-style-type:none;
+    margin-top:-65px;
+    margin-right:500px;
+    padding:0;
+    padding-top:6px;
+    padding-bottom:6px;
+}
+
+li{
+    display:inline;
+}
+
+a:link,a:visited{
+    height:200px;
+    font-weight:normal;
+    color: #242424;
+    background-color: rgba(107, 107, 107, 0.07);
+    text-align:center;
+    padding:6px;
+    text-decoration:none;
+    /*text-transform:uppercase;*/
+}
+
+a:hover,a:active{
+    color: rgba(255, 255, 255, 0.58);
+    background-color: #5e5e5e;
+}
+
+
+button{
+    margin-top:-65px;
+    margin-right:10px;
+    float:right;
+    width:80px;
+    height:33px;
+    font-size:15px;
+    color:white;
+    background-color: rgba(33, 33, 33, 0.99);
+    border:0px solid white;
+    border-radius:2px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color: rgba(67, 67, 67, 0.71);
+}
+
+#showBoard{
+    margin-top:-40px;
+    display:inline-block;
+}
+
+.typeBoard{
+    display:flex;
+}
+
+.showCase{
+    background-color:white;
+    width:22%;
+    height: 420px;
+    border:0.5px solid rgba(6, 6, 6, 0.3);
+    float:left;
+    margin-left:30px;
+    margin-bottom:20px;
+    border-radius:  0 0 20px 20px ;
+
+}
+
+.musicType{
+    color:white;
+    font-style: italic;
+    font-weight: bolder;
+    font-size:40px;
+    /*font-family: "Segoe Script";*/
+    margin-left:30px;
+}
+
+.lyric{
+    padding-left:6px;
+    padding-top:12px;
+    padding-bottom:9px;
+    padding-right:6px;
+    color:darkgray;
+    font-size: small;
+    font-family: "Segoe Script";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;/*显示行数*/
+}
+
+img{
+    border:15px rgba(255, 149, 63, 0.05) solid;
+    max-width: 90%;
+    /*max-height: 350px;*/
+    /*border-color: black;*/
+}
+
+.textPlace{
+    padding:1px 10px 1px 10px;
+}
+
+.songName{
+    font-size: large;
+    padding-left:6px;
+}
+
+.singer{
+    float: right;
+    font-size: medium;
+    color:darkgray;
+}
+
+.longName{
+    float: right;
+    font-size: small;
+    color:darkgray;
+    padding-top:5px;
+}
+
+#bottom{
+    height:120px;
+    width:101%;
+    background-color: #000000;
+    margin-top:100px;
+    margin-left:-20px;
+    margin-right:-200px;
+    position:absolute;
+}
+
+#logo{
+    color: rgba(255, 255, 255, 0.73);
+    margin-left:46%;
+    margin-top:50px;
+    position:absolute;
+}

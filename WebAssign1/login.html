@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheets/login.css">
+</head>
+<body>
+
+<section id = picBackground>
+    <header>
+        <h1>
+            <span class="lighterFont">MY</span>
+            <span id="boldFont">MUSIC</span></br>
+            <span class="lighterFont">COLLECTIONS</span>
+        </h1>
+    </header>
+
+    <div id = "loginDiv">
+        <div>Sign in</div>
+        <hr width="100%" color=black SIZE=3>
+        <form id="loginForm">
+            <section class="field">
+                <div><label class="formLabel" id="userIDLabel">Username</label></div>
+                <div><input type="text"
+                            id="userID"
+                            placeholder="Username"
+                            name="userID"></div>
+            </section>
+            <section class="field">
+                <div><label class="formLabel" id="passwordLabel">Password</label></div>
+                <div><input type="password"
+                            id="password"
+                            placeholder="Password"
+                            name="password" ></div>
+            </section>
+        </form>
+
+        <form method="get" action="./showBoard.html"> <!要有那个点！>
+            <button type="submit">Sign in</button>
+            <p id="forget">Forget password?</p>
+        </form>
+    </div>
+</section>
+
+<!--<section id = intro>-->
+    <!--<div>Hello My Music Collections</div>-->
+<!--</section>-->
+
+
+
+</body>
+</html>
