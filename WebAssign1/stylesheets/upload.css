@@ -1,0 +1,39 @@
+body{
+    background-image: url("../assets/16.jpg");
+}
+
+#nextBackground{
+    background-color:rgba(0,0,0,0.5);
+    /*margin:-30px -10px -100px -10px;*/
+    potision:absolute;
+    /*margin-bottom:-1000px;*/
+    padding-bottom: 200px;
+    background-size: cover;
+
+}
+
+form{
+    display: inline-block;
+}
+
+#single,#multiple{
+    margin-top:120px;
+    margin-left:220px;
+    width:300px;
+    height:300px;
+    background-color: rgba(255, 255, 255, 0.91);
+    font-size:50px;
+    font-weight: bold;
+    font-family: "Segoe Script";
+    border:0px;
+    border-radius: 150px;
+    box-shadow:-15px 0px 10px #5c5c5c;
+    cursor:pointer;
+    outline: none;//为了消去点击时出现的蓝框框
+}
+
+#single:hover,#multiple:hover{
+    background-color: rgb(255, 255, 255);
+    font-weight: normal;
+    box-shadow:-15px 0px 20px #7e7e7e;
+}
