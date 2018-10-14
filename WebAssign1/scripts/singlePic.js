@@ -1,3 +1,14 @@
+function widthLonger(imgDom){
+    if(imgDom.width>imgDom.height){
+        console.log("width!"+imgDom.width);
+        imgDom.style.width="730px";
+        console.log("width???"+imgDom.width);
+    }else{
+        imgDom.style.height="520px";
+        console.log("width???"+imgDom.width);
+    }
+}
+
 function imgPreview(fileDom){
     //判断是否支持FileReader
     if (window.FileReader) {
@@ -17,37 +28,81 @@ function imgPreview(fileDom){
     //读取完成
     reader.onload = function(e) {
         //获取图片dom
-        var img = document.getElementById("preview");
+        var img = document.getElementById("image");
         //图片路径设置为读取的图片
         img.src = e.target.result;
-        widthLonger(img,0);
+        // widthLonger(img);
+
     };
     reader.readAsDataURL(file);
+    document.getElementById("edit").style.visibility="visible";
+    document.getElementById("inputFile").style.display="none";
 }
 
-function widthLonger(imgDom,angle){
-    if(angle==90||angle==270){
-        if(imgDom.width>imgDom.height){
-            imgDom.setAttribute("width","530px");
-        }else{
-            img.setAttribute("height","730px");
-        }
-    }else{
-        if(imgDom.width>imgDom.height){
-            imgDom.setAttribute("width","730px");
-        }else{
-            img.setAttribute("height","530px");
-        }
-    }
 
-}
+//
+// window.onload = function(){
+//     var current = 0;
+//     var img=document.getElementById("preview");
+//     document.getElementById('rotateBtn').onclick = function(){
+//         console.log("current "+current);
+//         current = (current+90)%360;
+//         img.style.transform = 'rotate('+current+'deg)';
+//         widthLonger(img,current);
+//     }
+// };
+//
+// var cropBtn=document.getElementById("crop");
+// cropBtn.addEventListener('click', function () {
+//
+//     var image = document.querySelector('#preview');
+//     var result = document.querySelector('#result');
+//     var cropper = new Cropper(image, {
+//         ready: function () {
+//             var image = new Image();
+//             image.src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+//             console.log("ready",image);
+//             result.setAttribute("src",image.src);
+//         },
+//     });
+//
+//     var btn = document.getElementById("ok");
+//     btn.addEventListener("click",function(){
+//         var image = new Image();
+//         image.src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+//         console.log("result",image.src);
+//         result.setAttribute("src",image.src);
+//     });
+// });
 
-window.onload = function(){
-    var current = 0;
-    var img=document.getElementById("preview");
-    document.getElementById('rotateBtn').onclick = function(){
-        current = (current+90)%360;
-        img.style.transform = 'rotate('+current+'deg)';
-        widthLonger(img,current);
-    }
-};
+var edit=document.getElementById("edit");
+var rotate=document.getElementById("rotate");
+edit.addEventListener("click",function(){
+    rotate.style.visibility="visible";
+    edit.style.visibility="hidden";
+
+    var image=document.getElementById("image");
+    var cropper = new Cropper(image, {
+        // aspectRatio: 16 / 9,
+        viewMode:2,
+        preview:".small",
+        guides:false,
+        crop: function (e) {
+            console.log(e.detail.x);
+            console.log(e.detail.y);
+            console.log(e.detail.width);
+            console.log(e.detail.height);
+            console.log(e.detail.rotate);
+            console.log(e.detail.scaleX);
+            console.log(e.detail.scaleY);
+        }
+    });
+
+    rotate.addEventListener("click",function (ev) {
+        cropper.rotate(90);
+    })
+
+
+
+
+})

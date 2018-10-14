@@ -1,6 +1,23 @@
+
+body{
+    background-color: rgba(0, 0, 0, 0.82);
+}
+#edit{
+    visibility:hidden;
+}
+
+#rotate{
+    visibility: hidden;//尸位素餐
+    /*!*display: none;*! 不占位*/
+}
+
+.showPic{
+    display:inline-flex;
+}
+
 #border{
     border:5px solid rgba(126, 126, 126, 0.48);
-    margin-left:20%;
+    margin-left:5%;
     margin-top:10px;
     width:750px;
     height:550px;
@@ -10,10 +27,19 @@
     align-items:center;
 }
 
-#preview{
+#image{
     max-width: 95%;
-    max-height:95%;
+    /*max-height:95%;*/
     /*!*text-align:center;*!*/
     display:block;
     margin:auto;//这个也帮助实现居中
+}
+
+.small{
+    overflow: hidden;
+    width:400px;
+    max-height:400px;
+    /*height:200px;*/
+    margin-top:20px;
+    margin-left:20px;
 }

@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>SinglePic</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../stylesheets/singlePic.css">
+    <link rel="stylesheet" href="../stylesheets/cropper.css">
+
+
 </head>
 
 <body>
 
-<input type="file" name="file" onchange="imgPreview(this)">
-<button id="rotateBtn" type="submit">Rotate</button>
+<!--<select name="yourName" id="yourId">-->
+    <!--<option value="1">1</option>-->
+    <!--<option value="2">2</option>-->
+    <!--<option value="3">3</option>-->
+    <!--<option value="4">4</option>-->
+    <!--<option value="5">5</option>-->
+<!--</select>-->
+
+<input id="inputFile" type="file" name="file" placeholder="Select your picture" onchange="imgPreview(this)">
+
+
+<button id="edit" type="submit">Edit</button>
+<button id="rotate" type="submit">Rotate</button>
+<!--<button id="crop" type="submit">Crop</button>-->
+<!--<button id="ok" type="submit">OK</button>-->
 <br>
-<section id="border">
-    <img id="preview" />
+
+<section class="showPic">
+    <section id="border"><img id="image" /></section>
+    <section class="small"></section>
 </section>
 
 
-<script  src="../scripts/singlePic.js" charset="UTF-8">
-</script>
+
+<!--<h3>Result</h3>-->
+
+<!--&lt;!&ndash;<div id="result"></div>&ndash;&gt;-->
+<!--<img id="result" src="">-->
+
+<script src="../scripts/cropper.js"></script>
+<script  src="../scripts/singlePic.js" charset="UTF-8"></script>
 </body>
 </html>

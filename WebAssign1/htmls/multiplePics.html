@@ -90,14 +90,13 @@
     window.addEventListener('DOMContentLoaded', function () {
 
         var image = document.querySelector('#image');
-
         var result = document.querySelector('#result');
-
         var cropper = new Cropper(image, {
             ready: function () {
                 var image = new Image();
                 image.src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
-                result.appendChild(image);
+                console.log(image);
+                result.setAttribute("src",image.src);
             },
         });
 
@@ -112,11 +111,8 @@
             // result.appendChild(image);
             console.log(image.src);
             result.setAttribute("src",image.src);
+            // img.setAttribute("src",image.src);
         });
-
-
-
-
     });
 
 </script>
