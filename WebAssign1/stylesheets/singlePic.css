@@ -1,4 +1,19 @@
+#border{
+    border:5px solid rgba(126, 126, 126, 0.48);
+    margin-left:20%;
+    margin-top:10px;
+    width:750px;
+    height:550px;
+
+    display:flex;//以下三行实现完全居中
+    justify-content:center;
+    align-items:center;
+}
+
 #preview{
-    max-width: 80%;
-    max-height:80%;
+    max-width: 95%;
+    max-height:95%;
+    /*!*text-align:center;*!*/
+    display:block;
+    margin:auto;//这个也帮助实现居中
 }

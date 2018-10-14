@@ -1,10 +1,126 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="zh-cn">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+    <!--&lt;!&ndash;<link  href="/path/to/cropper.css" rel="stylesheet">&ndash;&gt;-->
+    <!--<script src="../scripts/cropper.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div>-->
+    <!--<img id="image" src="../assets/Serrini.jpg" width=500px>-->
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->
+
 <!DOCTYPE html>
+
 <html lang="zh-cn">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Cropper.js</title>
+
+    <link rel="stylesheet" href="../stylesheets/cropper.css">
+
+    <style>
+
+        .container {
+            display:inline-block;
+
+            max-width: 640px;
+
+            margin: 20px auto;
+
+        }
+
+
+
+        img {
+
+            max-width: 200px;
+
+        }
+
+    </style>
+
 </head>
+
 <body>
 
+<div class="container">
+
+    <h1>Crop a cross origin image</h1>
+
+    <p>A cross origin image with a <code>crossorigin</code> attribute and an available <code>Access-Control-Allow-Origin</code> response header can be cropped by Cropper.</p>
+
+    <button id="start">Start</button>
+
+    <h3>Image</h3>
+
+    <div>
+
+        <!--<img id="image" src="https://raw.githubusercontent.com/fengyuanchen/cropperjs/master/docs/images/picture.jpg" crossorigin>-->
+
+        <img id="image" src="../assets/Serrini.jpg">
+
+    </div>
+
+    <h3>Result</h3>
+
+    <!--<div id="result"></div>-->
+    <img id="result" src="">
+
+</div>
+
+
+
+<script src="../scripts/cropper.js"></script>
+
+<script>
+
+    window.addEventListener('DOMContentLoaded', function () {
+
+        var image = document.querySelector('#image');
+
+        var result = document.querySelector('#result');
+
+        var cropper = new Cropper(image, {
+            ready: function () {
+                var image = new Image();
+                image.src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+                result.appendChild(image);
+            },
+        });
+
+        var btn = document.getElementById("start");
+
+        var img=document.getElementById("image");
+
+        console.log(img);
+        btn.addEventListener("mouseup",function(){
+            var image = new Image();
+            image.src = cropper.getCroppedCanvas().toDataURL('image/jpeg');
+            // result.appendChild(image);
+            console.log(image.src);
+            result.setAttribute("src",image.src);
+        });
+
+
+
+
+    });
+
+</script>
+
 </body>
+
 </html>
