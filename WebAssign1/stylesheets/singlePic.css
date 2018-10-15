@@ -2,24 +2,83 @@
 body{
     background-color: rgba(0, 0, 0, 0.82);
 }
-#edit{
-    visibility:hidden;
+
+#back{
+    float:left;
 }
 
-#rotate{
-    visibility: hidden;//尸位素餐
-    /*!*display: none;*! 不占位*/
+#inputFile{
+    background-color: rgba(238, 238, 238, 0);
+    color:white;
+    border:1px solid white;
+    border-radius:3px;
+    font-size:15px;
+
+    margin-left:215px;
+    margin-top:10px;
+
 }
+
+#btnBar{
+    float:right;
+    display:none;
+}
+
+
+.funBtn{
+    font-size:15px;
+    font-family: "Segoe Script";
+    background-color: rgba(255, 255, 255, 0);
+    background-repeat: no-repeat;
+    background-size:20px 20px;
+    background-position:12px 8px;
+
+    padding-top:2px;
+    border:solid rgba(255, 255, 255, 0.11);
+    border-width:1px 1px 0 0;
+    /*border-radius:3px;*/
+
+    width:50px;
+    height:40px;
+    color:white;
+    cursor:pointer;
+}
+
+.funBtn:hover{
+    border-width:2px;
+}
+
+#edit{
+    /*visibility:hidden;*/
+    width:100px;
+    padding-left: 42px;
+    padding-right:15px;
+    float:right;
+    display:none;
+    background-image: url("../assets/editor-preview.png");
+}
+
+/*#rotateRight,#rotateLeft{*/
+    /*float:left;*/
+    /*!*visibility: hidden;//尸位素餐*!*/
+    /*!*display: none; //不占位*!*/
+    /*!*background-image: url("../assets/arrow-rotate-right.png");*!*/
+    /*!*padding-right:5px;*!*/
+/*}*/
 
 .showPic{
+    /*background-color: red;*/
     display:inline-flex;
+    /*width:750px;*/
+    /*height:550px;*/
 }
 
 #border{
-    border:5px solid rgba(126, 126, 126, 0.48);
-    margin-left:5%;
-    margin-top:10px;
-    width:750px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border:2px solid rgba(126, 126, 126, 0.33);
+    margin-left:245px;
+    margin-top:-5px;
+    width:850px;
     height:550px;
 
     display:flex;//以下三行实现完全居中
@@ -28,17 +87,20 @@ body{
 }
 
 #image{
-    max-width: 95%;
+    max-width: 98%;
+    max-height:98%;
     /*max-height:95%;*/
     /*!*text-align:center;*!*/
     display:block;
     margin:auto;//这个也帮助实现居中
+    overflow:hidden;
 }
 
 .small{
     overflow: hidden;
-    width:400px;
-    max-height:400px;
+    /*width:300px;*/
+    width:20%;
+    max-height:250px;
     /*height:200px;*/
     margin-top:20px;
     margin-left:20px;

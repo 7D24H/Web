@@ -12,12 +12,33 @@ body{
 
 }
 
+
+/*#back{*/
+    /*background-color: rgba(255, 255, 255, 0);*/
+    /*background-image: url("../assets/back.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size:30px 30px;*/
+    /*color: rgba(255, 255, 255, 0);*/
+    /*width:32px;*/
+    /*height:32px;*/
+    /*border:solid rgba(255, 255, 255, 0);*/
+    /*border-radius: 16px;*/
+    /*outline: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*#back:hover{*/
+    /*background-color: rgba(255, 255, 255, 0.21);*/
+    /*background-image: url("../assets/backhover.png");*/
+    /*box-shadow:3px 0px 2px #7e7e7e;*/
+/*}*/
+
 form{
     display: inline-block;
 }
 
 #single,#multiple{
-    margin-top:120px;
+    margin-top:100px;
     margin-left:220px;
     width:300px;
     height:300px;

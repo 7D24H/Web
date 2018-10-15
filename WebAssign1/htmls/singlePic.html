@@ -6,6 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../stylesheets/singlePic.css">
+    <link rel="stylesheet" href="../stylesheets/main.css">
     <link rel="stylesheet" href="../stylesheets/cropper.css">
 
 
@@ -21,11 +22,32 @@
     <!--<option value="5">5</option>-->
 <!--</select>-->
 
-<input id="inputFile" type="file" name="file" placeholder="Select your picture" onchange="imgPreview(this)">
+<form method="get" action="upload.html"> <!要有那个点！>
+    <button id="back" type="submit">Back</button>
+</form>
+
+<section id="input">
+    <input id="inputFile" type="file" name="file" placeholder="Select your picture" onchange="imgPreview(this)">
+</section>
+
+<button class="funBtn" id="edit" type="submit">Edit</button>
+<div id="btnBar">
+    <button class="funBtn" id="rotateRight" type="submit"></button>
+    <br>
+    <button class="funBtn" id="rotateLeft" type="submit"></button>
+    <br>
+    <button class="funBtn" id="oneToOne" type="submit">1:1</button>
+    <br>
+    <button class="funBtn" id="twoToThree" type="submit">2:3</button>
+    <br>
+    <button class="funBtn" id="threeToFour" type="submit">3:4</button>
+    <br>
+    <button class="funBtn" id="nineToSixteen" type="submit">9:16</button>
+    <br>
+    <button class="funBtn" id="free" type="submit">free</button>
+</div>
 
 
-<button id="edit" type="submit">Edit</button>
-<button id="rotate" type="submit">Rotate</button>
 <!--<button id="crop" type="submit">Crop</button>-->
 <!--<button id="ok" type="submit">OK</button>-->
 <br>
