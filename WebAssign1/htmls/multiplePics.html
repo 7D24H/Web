@@ -2,19 +2,22 @@
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="../scripts/cropper.js"></script>
-    <script src="../scripts/multiplePics.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>图片上传</title>
+    <link rel="stylesheet" href="../stylesheets/multiplePics.css">
+    <!--<script src="../scripts/cropper.js"></script>-->
+
 </head>
 <body>
 
-<label>请选择一个图像文件：</label>
+<section id="showPlace">
+    <section id="upload"></section>
+    <canvas id="myCanvas" width="400px" height="100%"></canvas>
+</section>
 
-<input id="inputFiles" type="file" name="file" onchange="imgPreview(this)" multiple>
-
-
+<button class="submit">submit</button>
+<script src="../scripts/multiplePics.js"></script>
 </body>
 </html>
-
 
 

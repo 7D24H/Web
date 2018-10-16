@@ -40,6 +40,8 @@ function imgPreview(fileDom){
     console.log(document.getElementById("edit").style);
     document.getElementById("inputFile").style.display="none";
 
+    // document.getElementById("edit").click();
+
 }
 
 
@@ -110,7 +112,7 @@ edit.addEventListener("click",function(){
 
 
     var cropper = new Cropper(image, {
-        // aspectRatio: 16 / 9,
+        // aspectRatio: 1 / 1,
         viewMode:2,
         preview:".small",
         guides:false,
@@ -124,6 +126,8 @@ edit.addEventListener("click",function(){
             // console.log(e.detail.scaleY);
         }
     });
+
+    // console.log("cropper",cropper);
 
     rotateRight.addEventListener("click",function (ev) {
         cropper.rotate(90);
