@@ -30,6 +30,7 @@ function imgPreview(fileDom){
         //获取图片dom
         var img = document.getElementById("image");
         //图片路径设置为读取的图片
+        console.log("target",e.target);
         img.src = e.target.result;
         // widthLonger(img);
 
